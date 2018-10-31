@@ -1,0 +1,12 @@
+{
+    "presets": [
+        "env","stage-0"
+    ],
+    "plugins": [
+        "transform-runtime",
+        ["import", {
+            "libraryName": "iview",
+            "libraryDirectory": "src/components"
+          }]
+    ]
+}
