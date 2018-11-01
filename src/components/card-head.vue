@@ -1,28 +1,38 @@
 <template>
-       <div class="card_head" @mouseenter="show" @mouseleave="show">
-            最新电影
+    <div>
+       <div class="card_head" @mouseenter="show(item)" @mouseleave="show(item)" v-for="item in msg" :key="item.title">
+           {{item.title}}
             <Icon type="ios-arrow-forward" />
-            <a v-show="flag">更多</a>
+            <a v-show="item.flag">更多</a>
+            <awesome></awesome>
        </div>
+    </div>
     </template>
     <script>
+        import awesome from './vueawesome.vue'
         export default {
             data(){
                 return{
-                    flag:false,
+                    
+                    msg:[{title:"今日推荐",flag:false},{title:"本周最热",flag:false}]
                 }
             },
             methods:{
-                show(){
-                    this.flag=!this.flag;
-                },
+                show(item){
+                    item.flag=!item.flag;
+                }
           
+            },
+            components:{
+                awesome
             }
+            
             
         }
     </script>
     <style scoped>
        .card_head{
+           margin-top: 15px;
            margin-left: 15px;
            font-size: 28px;
        }

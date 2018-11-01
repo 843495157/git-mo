@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router.js'
-// import swiper from './components/swiper.vue'
+
 
 import { Button, Table ,Carousel ,CarouselItem,Input,Menu,MenuItem,Affix,Poptip,Icon} from 'iview';
 import 'iview/dist/styles/iview.css';

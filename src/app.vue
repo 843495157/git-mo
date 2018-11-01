@@ -9,9 +9,10 @@
         </Affix>
         <swiper></swiper>
         <div>
-            <card-head></card-head>
+            <card-head ></card-head>
             
         </div>
+       
     </div>
 </template>
 <script>
@@ -19,21 +20,23 @@
     import search from './components/search.vue'
     import menu1 from "./components/menu.vue"
     import cardHead from "./components/card-head.vue"
+    
     export default {
         data() {
             return {
-
+               
             }
         },
         components: {
             swiper,
             search,
             menu1,
-            cardHead
+            cardHead,
+            
         }
     }
 </script>
-<style scoped>
+<style>
     .container {
         min-width: 960px;
         margin: 0 auto;
@@ -51,5 +54,9 @@
     .head-container img {
         height: 100%;
 
+    }
+    .ivu-affix{
+        z-index: 12 !important;
+        width: 100% !important;
     }
 </style>
