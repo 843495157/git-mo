@@ -2,18 +2,18 @@
         <Menu mode="horizontal" :theme="theme1" active-name="1">
             <MenuItem name="1">
                 <!-- <Icon type="ios-paper" /> -->
-                内容管理
+               首页
             </MenuItem>
             <MenuItem name="2">
                 <!-- <Icon type="ios-people" /> -->
-                用户管理
+                喜剧片
             </MenuItem>
             <MenuItem name="3">
-                电视剧
+                动作片
             </MenuItem>
             <MenuItem name="4">
                 <!-- <Icon type="ios-construct" /> -->
-                综合设置
+               爱情片
             </MenuItem>
         </Menu>
     </template>

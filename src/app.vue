@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+           
         <Affix>
             <div class="head-container">
                 <img src="/src/images/logo-2.png">
@@ -7,20 +8,12 @@
             </div>
             <menu1></menu1>
         </Affix>
-        <swiper></swiper>
-        <div>
-            <card ></card>
-          
-        </div>
-       <!-- <router-view></router-view> -->
+        <router-view></router-view>
     </div>
 </template>
 <script>
-    import swiper from './components/swiper.vue'
     import search from './components/search.vue'
-    import menu1 from "./components/menu.vue"
-    import card from "./components/card.vue"
-    
+    import menu1 from "./components/menu.vue" 
     export default {
         data() {
             return {
@@ -28,10 +21,10 @@
             }
         },
         components: {
-            swiper,
+            // swiper,
             search,
             menu1,
-            card,
+            // card,
             
         }
     }

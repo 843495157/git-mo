@@ -1,0 +1,9 @@
+<template>
+    <div>
+        这是detail.
+    </div>
+</template>
+<script>
+</script>
+<style>
+</style>
