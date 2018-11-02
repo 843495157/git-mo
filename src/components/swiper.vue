@@ -32,4 +32,7 @@
         height: 792px;
         cursor: pointer;
     }
+    .ivu-carousel{
+        margin-top: -64px;
+    }
 </style>

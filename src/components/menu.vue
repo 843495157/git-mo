@@ -21,7 +21,7 @@
         export default {
             data () {
                 return {
-                    theme1: 'dark'
+                    theme1: 'light'
                 }
             }
         }
@@ -31,4 +31,18 @@
             display: flex;
             justify-content: space-evenly;
         }
+        .ivu-menu-light{
+            background: none;
+            height: 100%;
+        }
+        .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item:hover, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu-active, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu:hover{
+            border-bottom: none;
+            color: greenyellow;
+        }
+        .ivu-menu-horizontal.ivu-menu-light:after{
+            display: none;
+        }
+        .ivu-menu-horizontal .ivu-menu-item, .ivu-menu-horizontal .ivu-menu-submenu{
+        transition: none;
+    }
     </style>

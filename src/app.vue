@@ -1,13 +1,17 @@
 <template>
     <div class="container">
            
-        <Affix>
-            <div class="head-container">
-                <img src="/src/images/logo-2.png">
+    
+        <div class="head-container ivu-affix">
+               
+                   
+                        <img src="/src/images/logo1-2.png">
+                       
+                <menu1></menu1>
                 <search></search>
             </div>
-            <menu1></menu1>
-        </Affix>
+            <!-- <menu1></menu1> -->
+        
         <router-view></router-view>
     </div>
 </template>
@@ -38,10 +42,14 @@
     .head-container {
         display: flex;
         display: -webkit-flex;
-        height: 100px;
-        justify-content: space-around;
+        height: 64px;
+        justify-content: space-between;
         align-items: center;
-        background-color: #ffffff;
+        background: linear-gradient(to bottom,rgba(238,238,238,.7) 0%,rgba(255,255,255,0) 100%);
+        padding-left: 15px;
+        padding-right: 15px;
+        box-shadow: 0 1px 8px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 1px 8px rgba(0,0,0,.3);
     }
 
     .head-container img {
@@ -51,5 +59,9 @@
     .ivu-affix{
         z-index: 12 !important;
         width: 100% !important;
+        top: 0;
+        left: 0;
     }
+ 
+  
 </style>
