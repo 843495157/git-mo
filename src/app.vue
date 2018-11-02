@@ -11,8 +11,10 @@
                 <search></search>
             </div>
             <!-- <menu1></menu1> -->
+        <div class="content">
+                <router-view></router-view>
+        </div>
         
-        <router-view></router-view>
     </div>
 </template>
 <script>
@@ -63,5 +65,7 @@
         left: 0;
     }
  
-  
+    .content{
+        padding-top: 64px;
+    }
 </style>
