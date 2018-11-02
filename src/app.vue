@@ -9,17 +9,17 @@
         </Affix>
         <swiper></swiper>
         <div>
-            <card-head ></card-head>
-            
+            <card ></card>
+          
         </div>
-       
+       <!-- <router-view></router-view> -->
     </div>
 </template>
 <script>
     import swiper from './components/swiper.vue'
     import search from './components/search.vue'
     import menu1 from "./components/menu.vue"
-    import cardHead from "./components/card-head.vue"
+    import card from "./components/card.vue"
     
     export default {
         data() {
@@ -31,7 +31,7 @@
             swiper,
             search,
             menu1,
-            cardHead,
+            card,
             
         }
     }

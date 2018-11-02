@@ -1,6 +1,6 @@
 <template>
      
-        <swiper :options="swiperOption">
+        <!-- <swiper :options="swiperOption">
           <swiper-slide><img src="../images/text1.jpg"/></swiper-slide>
           <swiper-slide><img src="../images/text2.jpg"/></swiper-slide>
           <swiper-slide><img src="../images/text3.jpg"/></swiper-slide>
@@ -13,7 +13,13 @@
           <swiper-slide><img src="../images/text10.jpg"/></swiper-slide>
           <div class="swiper-button-prev swiper-button" slot="button-prev"></div>
           <div class="swiper-button-next swiper-button" slot="button-next"></div>
-        </swiper>
+        </swiper> -->
+        <swiper :options="swiperOption">
+            <swiper-slide v-for="(slide,index) in swiperSlides" :key="index"><img :src="slide"/></swiper-slide>
+           
+            <div class="swiper-button-prev swiper-button" slot="button-prev"></div>
+            <div class="swiper-button-next swiper-button" slot="button-next"></div>
+          </swiper>
   </template>
   <!-- https://github.com/surmon-china/vue-awesome-swiper/blob/master/examples/29-dynamic-slides.vue  动态加载轮播图-->
 <script>
@@ -33,7 +39,11 @@ import 'swiper/dist/css/swiper.css'
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
           }
-        }
+        },
+        swiperSlides:[
+           //  {src:"../src/images/text1.jpg"},{src:"../src/images/text2.jpg"},{src:"../src/images/text3.jpg"},{src:"../src/images/text4.jpg"},{src:"../src/images/text5.jpg"},{src:"../src/images/text6.jpg"},{src:"../src/images/text7.jpg"}
+           "../src/images/text1.jpg","../src/images/text2.jpg","../src/images/text3.jpg","../src/images/text4.jpg"
+         ]
       }
     },
     mounted() {
@@ -48,11 +58,6 @@ import 'swiper/dist/css/swiper.css'
             },function(){
                 clearInterval(int);
             })
-               
-          
-      
-     
-   
     },
    components: {
      swiper,
