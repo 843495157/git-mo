@@ -17,24 +17,47 @@
     import 'swiper/dist/css/swiper.css'
     import { swiper, swiperSlide } from 'vue-awesome-swiper'
      import $ from 'jquery'
+     import text1 from "../images/text1.jpg"
+     import text2 from "../images/text2.jpg"
+     import text3 from "../images/text3.jpg"
+     import text4 from "../images/text4.jpg"
+     import text5 from "../images/text5.jpg"
+     import text6 from "../images/text6.jpg"
+     import text7 from "../images/text7.jpg"
+     import text8 from "../images/text8.jpg"
+     import text9 from "../images/text9.jpg"
+     import text10 from "../images/text10.jpg"
+     
+     
+
     export default {
         data() {
             return {
 
                 msg: [
                     {
-                        title: "今日推荐", flag: false, swiperSlides: [
-                            "../src/images/text1.jpg", "../src/images/text2.jpg", "../src/images/text3.jpg", "../src/images/text4.jpg", "../src/images/text5.jpg", "../src/images/text6.jpg", "../src/images/text7.jpg", "../src/images/text8.jpg"
+                        title: "今日推荐", 
+                        flag: false, 
+                        // swiperSlides: [
+                        //     "../src/images/text1.jpg", "../src/images/text2.jpg", "../src/images/text3.jpg", "../src/images/text4.jpg", "../src/images/text5.jpg", "../src/images/text6.jpg", "../src/images/text7.jpg", "../src/images/text8.jpg"
+                        // ]
+                        swiperSlides: [
+                            text1,text2,text3,text4,text5,text6,text7,text8
                         ]
                     },
                     {
-                        title: "本周最热", flag: false, swiperSlides: [
-                            "../src/images/text10.jpg", "../src/images/text9.jpg", "../src/images/text8.jpg", "../src/images/text7.jpg", "../src/images/text6.jpg", "../src/images/text5.jpg", "../src/images/text4.jpg", "../src/images/text3.jpg", "../src/images/text2.jpg", "../src/images/text1.jpg", "../src/images/1.jpg"
+                        title: "本周最热",
+                        flag: false, 
+                        // swiperSlides: [
+                        //     "../src/images/text10.jpg", "../src/images/text9.jpg", "../src/images/text8.jpg", "../src/images/text7.jpg", "../src/images/text6.jpg", "../src/images/text5.jpg", "../src/images/text4.jpg", "../src/images/text3.jpg", "../src/images/text2.jpg", "../src/images/text1.jpg", "../src/images/1.jpg"
+                        // ]
+                        swiperSlides: [
+                            text10,text9,text8,text7,text6,text5,text4,text3,text2,text1
                         ]
                     }
                 ],
                 swiperOption: {
-                    slidesPerView: 5,
+                    slidesPerView: 7,
                     spaceBetween: 30,
 
                     navigation: {
@@ -94,6 +117,7 @@
     .swiper-slide img {
         width: 100%;
         height: 240px;
+        cursor: pointer;
     }
 
    .swiper-container .swiper-wrapper {

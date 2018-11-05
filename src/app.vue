@@ -5,8 +5,8 @@
         <div class="head-container ivu-affix">
                
                    
-                        <img src="/src/images/logo1-2.png">
-                       
+                        <!-- <img src="/src/images/logo1-2.png"> -->
+                       <img :src=logo />
                 <menu1></menu1>
                 <search></search>
             </div>
@@ -20,10 +20,11 @@
 <script>
     import search from './components/search.vue'
     import menu1 from "./components/menu.vue" 
+    import logo from "./images/logo1-2.png"
     export default {
         data() {
             return {
-               
+               logo
             }
         },
         components: {
@@ -52,6 +53,7 @@
         padding-right: 15px;
         box-shadow: 0 1px 8px rgba(0,0,0,.3);
         -webkit-box-shadow: 0 1px 8px rgba(0,0,0,.3);
+        min-width: 960px;
     }
 
     .head-container img {
