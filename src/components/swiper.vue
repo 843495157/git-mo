@@ -1,6 +1,6 @@
 <template>
     <Carousel v-model="value1" :autoplay="setting.autoplay" :autoplay-speed="setting.autoplaySpeed" :dots="setting.dots"
-        :radius-dot="setting.radiusDot" :trigger="setting.trigger" :arrow="setting.arrow" loop>
+        :radius-dot="setting.radiusDot" :trigger="setting.trigger" :arrow="setting.arrow">
         <CarouselItem v-for="item in imgList" :key="item.id">
             <div class="demo-carousel" @click="goDetail(item.id)"><img :src=item.src /></div>
         </CarouselItem>
