@@ -2,10 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router.js'
 import VueRouter from 'vue-router'
+import VueResource from 'vue-resource'
 
 import { Button, Table ,Carousel ,CarouselItem,Input,Menu,MenuItem,Affix,Poptip,Icon} from 'iview';
 import 'iview/dist/styles/iview.css';
 Vue.use(VueRouter)
+Vue.use(VueResource)
 Vue.component('Button', Button);
 Vue.component('Table', Table);
 Vue.component('CarouselItem',CarouselItem);

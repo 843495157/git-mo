@@ -6,7 +6,7 @@
                
                    
                         <!-- <img src="/src/images/logo1-2.png"> -->
-                       <img :src=logo />
+                <router-link to='/'><img :src=logo /></router-link>
                 <menu1></menu1>
                 <search></search>
             </div>
@@ -58,7 +58,7 @@
 
     .head-container img {
         height: 100%;
-
+        
     }
     .ivu-affix{
         z-index: 12 !important;

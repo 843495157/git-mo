@@ -6,7 +6,7 @@ import detail from './components/detail.vue'
 var router =new VueRouter({
     routes:[
         { path:'/' , component: home },
-        { path:'/detail' ,component:detail}
+        { path:'/detail/:id' ,component:detail}
     ]
 })
 
