@@ -3,9 +3,9 @@
         <div class="card_head" @mouseenter="show(item)" @mouseleave="show(item)" v-for="item in msg" :key="item.title">
             {{item.title}}
             <Icon type="ios-arrow-forward" />
-            <a v-show="item.flag">更多</a>
+            <router-link v-show="item.flag" tag="a" to="/more">更多</router-link>
             <swiper :options="swiperOption">
-                <swiper-slide v-for="(slide,index) in item.swiperSlides" :key="index"><img :src="slide" /></swiper-slide>
+                <swiper-slide v-for="(slide,index) in item.swiperSlides" :key="index" @click="gotoDetail(item.id)"><img :src="slide.src" /><a>123</a></swiper-slide>
 
                 <div class="swiper-button-prev swiper-button" slot="button-prev"></div>
                 <div class="swiper-button-next swiper-button" slot="button-next"></div>
@@ -42,7 +42,15 @@
                         //     "../src/images/text1.jpg", "../src/images/text2.jpg", "../src/images/text3.jpg", "../src/images/text4.jpg", "../src/images/text5.jpg", "../src/images/text6.jpg", "../src/images/text7.jpg", "../src/images/text8.jpg"
                         // ]
                         swiperSlides: [
-                            text1,text2,text3,text4,text5,text6,text7,text8
+                            {id:1,src:text1},
+                            {id:2,src:text2},
+                            {id:3,src:text3},
+                            {id:4,src:text4},
+                            {id:5,src:text5},
+                            {id:6,src:text6},
+                            {id:7,src:text7},
+                            {id:8,src:text8}
+
                         ]
                     },
                     {
@@ -52,7 +60,17 @@
                         //     "../src/images/text10.jpg", "../src/images/text9.jpg", "../src/images/text8.jpg", "../src/images/text7.jpg", "../src/images/text6.jpg", "../src/images/text5.jpg", "../src/images/text4.jpg", "../src/images/text3.jpg", "../src/images/text2.jpg", "../src/images/text1.jpg", "../src/images/1.jpg"
                         // ]
                         swiperSlides: [
-                            text10,text9,text8,text7,text6,text5,text4,text3,text2,text1
+                            {id:10,src:text10},
+                            {id:11,src:text9},
+                            {id:12,src:text8},
+                            {id:13,src:text7},
+                            {id:14,src:text6},
+                            {id:15,src:text5},
+                            {id:16,src:text4},
+                            {id:17,src:text3},
+                            {id:18,src:text2},
+                            {id:19,src:text1}
+
                         ]
                     }
                 ],
@@ -70,6 +88,9 @@
         methods: {
             show(item) {
                 item.flag = !item.flag;
+            },
+            gotoDetail(id){
+                this.$router.push('/detail/' + id);
             }
 
         },
